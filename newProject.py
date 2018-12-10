@@ -11,6 +11,7 @@ from PIL import Image  # for loading images as YCbCr format
 import scipy.misc
 import scipy.ndimage
 
+
 try:
     xrange
 except:
@@ -173,7 +174,7 @@ def train(sess, checkpoint_dir):
         print(" [!] Load failed...")
     print("Training...")
 
-    for ep in xrange(1500):
+    for ep in xrange(5000):
         # Run by batch images
         batch_idxs = len(train_data) // batch_size
         for idx in xrange(0, batch_idxs):        
